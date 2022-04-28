@@ -1,0 +1,149 @@
+Task: smallest number ternary operator.
+public class Task28apr3 {
+	int d;
+	void meth1(int x,int y,int z)
+	{
+		
+		d=(x<y)?(x<z?x:z):(y<z?y:z);
+		
+			System.out.println(d+" is smallest");
+		
+	}
+public static void main(String[] args) {
+		
+		Task28apr3 obj=new Task28apr3();
+		obj.meth1(22,33,44);
+	}
+
+}
+Task: armstrong number
+public class Task28apr2 {
+	void meth1(int x)
+	{
+		int i,j,d,temp;
+		temp=x;
+		int sum=0;
+		while(x!=0)
+		{  
+			d=x%10;
+			sum=sum+(d*d*d);
+			x=x/10;
+		}
+		if(temp==sum)
+			System.out.println(sum+" is armstrong");
+		else
+			System.out.println(sum+" is not armstrong");
+	}
+public static void main(String[] args) {
+		
+		Task28apr2 obj=new Task28apr2();
+		obj.meth1(153);
+	}
+
+}
+
+Task:Binary search
+package CLASSROOMTASK;
+import java.util.Scanner;
+public class Binarysearch {
+	
+	Scanner sc=new Scanner(System.in);
+	void meth1()
+	{
+		
+		int l,h,mid,e,found,n;
+		found=0;
+		
+		System.out.println("enter search element");
+		e=sc.nextInt();
+		
+		System.out.println("enter number of element in array");
+		n=sc.nextInt();
+		
+		int[] x= new int[10];  
+		System.out.println("Enter the elements of the array: ");  
+		for(int i=0; i<n; i++)  
+		{  
+		 
+		x[i]=sc.nextInt();  
+		}  
+		System.out.println("Array elements are: ");  
+		 
+		for (int i=0; i<n; i++)   
+		{  
+		System.out.print(" "+x[i]+" ");  
+		}  
+
+		
+		System.out.println("");  
+		  l=0;
+		  h=x.length-1;
+		while(l<=h)
+		{
+			mid=(l+h)/2;
+			if(e==x[mid])
+			{   
+				found=1;
+				break;
+			}
+
+			else if(e>x[mid])
+			l=mid+1;
+			else 
+				h=mid-1;
+				}
+		if (found==1)
+			System.out.println(e+"is found");
+		else
+			System.out.println(e+"is found");
+	
+	}
+	public static void main(String[] args) {
+		
+		Binarysearch obj=new Binarysearch();
+		obj.meth1();
+		
+		
+	}
+
+}
+Task: Vowels and consonant
+package CLASSROOMTASK;
+import java.util.Scanner;
+public class Task28apr {
+	Scanner sc=new Scanner(System.in);
+	void meth1()
+	{
+		
+		String h;
+		System.out.println("enter search element");
+		h=sc.next();
+		
+		switch(h)
+		{
+		case "a":System.out.println("vowel");
+		break;
+		case "e":System.out.println("vowel");
+		break;
+		case "i":System.out.println("vowel");
+		break;
+		case "o":System.out.println("vowel");
+		break;
+		case "u":System.out.println("vowel");
+		break;
+		default:
+			System.out.println("consonant");
+		    break;
+		}
+		
+		}
+	
+	public static void main(String[] args) {
+		
+		Task28apr obj=new Task28apr();
+		obj.meth1();
+	}
+
+}
+
+
